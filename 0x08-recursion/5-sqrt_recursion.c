@@ -1,10 +1,11 @@
 #include "main.h"
 /**
  * _sqrt_recursion - checks natural square root
- * @n: the number
+ *@n: the number
  * @i:base
  * Return: int
  */
+int sqrt_helper(int n, int i);
 int _sqrt_recursion(int n)
 {
 	if (n == 0 || n == 1)
@@ -20,9 +21,9 @@ int _sqrt_recursion(int n)
 		return (sqrt_helper(n, 2));
 	}
 /**
- * sqrt_helper - checks for the square root
- * @n: number
+ * sqrt_helper - checks for the matching perfect root
  * @i: base
+ * @n: number
  * Return: int
  */
 int sqrt_helper(int n, int i)
