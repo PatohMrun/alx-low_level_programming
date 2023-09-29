@@ -20,6 +20,7 @@ int _sqrt_recursion(int n)
 	{
 		return (sqrt_helper(n, 2));
 	}
+}
 /**
  * sqrt_helper - checks for the matching perfect root
  * @i: base
