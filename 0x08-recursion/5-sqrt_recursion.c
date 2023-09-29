@@ -5,7 +5,6 @@
  * @i:base
  * Return: int
  */
-int sqrt_helper(int n, int i);
 int _sqrt_recursion(int n)
 {
 	if (n == 0 || n == 1)
