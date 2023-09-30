@@ -5,3 +5,4 @@
 4-pow_recursion.c returns the power of a number raised to another
 5-sqrt_recursion.c checks for the natural square root of a number
 6-is_prime_number.c determines a prime number
+100-is_palindrome.c checks whether a string is a palindrome
