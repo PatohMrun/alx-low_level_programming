@@ -19,7 +19,7 @@ int check_palindrome(char *s, int start, int end)
 	}
 	else
 	{
-		return (is_palindrome(s, start + 1, end - 1));
+		return (check_palindrome(s, start + 1, end - 1));
 	}
 }
 /**
