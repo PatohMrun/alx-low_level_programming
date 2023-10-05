@@ -6,29 +6,32 @@
  * @argc: argument count
  * @argv: arguments
  *
- * Return: 0 if successful, 1 if one of
- * the numbers contains symbols that are not digits
+ * Return: 0
  */
 int main(int argc, char **argv)
 {
-	int i, sum = 0;
+	int i, n, sum = 0;
+	char *flag;
 
-	for (i = 1; i < argc; i++)
+	if (argc < 2)
 	{
-		char *arg = argv[i];
-
-		for (int j = 0; arg[j] != '\0'; j++)
-		{
-			if (arg[j] < '0' || arg[j] > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-
-		sum += atoi(arg);
+		printf("0\n");
+		return (0);
 	}
 
+	for (i = 1; argv[i]; i++)
+	{
+		n = strtol(argv[i], &flag, 10);
+		if (*flag)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
+		{
+			sum += n;
+		}
+	}
 	printf("%d\n", sum);
 
 	return (0);
